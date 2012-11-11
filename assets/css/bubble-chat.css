@@ -80,6 +80,11 @@ body {
   /*margin: auto;*/
 }
 
+/* question background */
+.qbackground {
+    style="background-color: #FFE673"      
+}
+
 .navbar .brand {
   font-style: italic;
   font-size: 30px;
