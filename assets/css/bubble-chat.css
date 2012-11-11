@@ -85,10 +85,7 @@ body {
     style="background-color: #FFE673"      
 }
 
-.plus-button {
-    width=10px;
-}
-
-.minus-button {
-    width=10px;
+.navbar .brand {
+  font-style: italic;
+  font-size: 30px;
 }
