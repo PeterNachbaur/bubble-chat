@@ -4,11 +4,12 @@ var sub
 var starting_width
 var width 
 var quote = 0
-var quotes = ['"WWJD?"',
+var quotes = ['"What is an index fund?"',
   '"How do you get inspiration for your songs?"',
  '"Dude, where\'s my car?"', 
  '"Are you Sarah Connor?"', 
  '"Why is the rum gone?"', 
+ '"Is the buffet worth it at Shalimar?"', 
  '"What can we do for America?"']
 
 function timer()
@@ -27,7 +28,7 @@ function timer()
     count = question_length;
     $("#current-question-text").html(quotes[quote]);
     quote++;
-    if (quote>quotes.length) quote =0;
+    if (quote>=quotes.length) quote = 0;
     counter = setInterval(timer, 1000); //ms
   }
 
