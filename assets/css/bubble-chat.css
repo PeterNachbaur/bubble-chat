@@ -79,3 +79,8 @@ body {
 .current-question.container {
   /*margin: auto;*/
 }
+
+.navbar .brand {
+  font-style: italic;
+  font-size: 30px;
+}
