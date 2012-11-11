@@ -1,18 +1,55 @@
 <html>
+
+<head>
+	<lr>
+</head>
+		
+
 <body>
+	<h1> Facebook Login Test </h1>
 <div id="fb-root"></div>
 <script>
   // Additional JS functions here
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '377059115713072', // App ID
-      channelUrl : 'https://guarded-ravine-6016.herokuapp.com/', // Channel File
+      channelUrl : 'localhost/bubble-chat/sidd_index.html', //'https://guarded-ravine-6016.herokuapp.com/', // Channel File
       status     : true, // check login status
       cookie     : true, // enable cookies to allow the server to access the session
       xfbml      : true  // parse XFBML
     });
 
     // Additional init code here
+	FB.getLoginStatus(function(response) {
+	  if (response.status === 'connected') {
+	    // connected
+	  } else if (response.status === 'not_authorized') {
+	    // not_authorized
+		login();
+	  } else {
+	    // not_logged_in
+		login();
+	  }
+	 });
+	
+	function login() {
+	    FB.login(function(response) {
+	        if (response.authResponse) {
+	            // connected
+									testAPI();
+	        } else {
+	            // cancelled
+	        }
+	    });
+	}
+	
+	function testAPI() {
+	    console.log('Welcome!  Fetching your information.... ');
+	    FB.api('/me', function(response) {
+	        console.log('Good to see you, ' + response.name + '.');
+	    });
+	}
+
 
   };
 
