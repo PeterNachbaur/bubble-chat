@@ -44,7 +44,24 @@ function increment()
 {
   var str = $('#yeah-btn').text();
   var int = parseInt(str.substr(6));
+  int++;
   $('#yeah-btn').text("Yeah: "+int)
+}
+
+function incrementYeah() 
+{
+  var str = $('#yeah-btn').text();
+  var int = parseInt(str.substr(6));
+  int++;
+  $('#yeah-btn').text("Yeah: "+int)
+}
+
+function incrementBoo() 
+{
+  var str = $('#boo-btn').text();
+  var int = parseInt(str.substr(5));
+  int++;
+  $('#boo-btn').text("Boo: "+int)
 }
 
 
@@ -55,6 +72,10 @@ $(document).ready(function(){
   $("#current-question-text").html('"Whyyyyy do you build me up, build me up?"');
   starting_width = calcWidth("bar");
   sub = width/count
-  $('.btn-success').click(function() {
-    increment()})
+  $('#yeah-btn').click(function() {
+    incrementYeah()
+  });
+  $('#boo-btn').click(function() {
+    incrementBoo()
+  });
 });
