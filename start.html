@@ -61,7 +61,7 @@
         margin-top:20px;
         margin-right:auto;
         margin-left:auto;
-        width: 50%;
+        width: 70%;
         
 
       }
@@ -84,7 +84,7 @@
 
     <script src="./assets/js/jquery.js"></script>
     <script> 
-      var count=10;
+      var count=60;
       var sub
       var width
       console.log(width)
@@ -95,16 +95,19 @@
       {
         count=count-1;
         width=width-sub;
-        if (count <= 0)
-        {
-          clearInterval(counter);
-          document.getElementById("timer").innerHTML= "0";
-          return;
-        }
 
         document.getElementById("timer").innerHTML=count + ""; 
         console.log(width)
         $(".bar").width(width);
+        console.log(count)
+        if (count <= 0)
+        {
+          document.getElementById("timer").innerHTML= "0";
+          $(".bar").width(width);
+          clearInterval(counter);
+          return;
+        }
+
       }
 
       function calcWidth(classname) 
@@ -176,9 +179,9 @@
       		
       </div>
 
-      <div id=="progressthird">
-        <span id="timer" class="span2" style="font-size:25px; line-height:50px"></span>
-        <div class="progress progress-striped active" style="">
+      <div id=="progressthird" style="margin-bottom:40px">
+        <span id="timer" class="span2" style="font-size:25px; line-height:50px;font-weight:bold;color:red;text-align:right"></span>
+        <div class="progress progress-striped active" style="background-color:white">
 
           <div id="bar" class="bar" style="width: 100%;"></div>    
         </div>
