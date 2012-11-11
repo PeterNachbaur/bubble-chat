@@ -5,7 +5,7 @@ var starting_width
 var width 
 var quote = 0
 var quotes = ['"WWJD?"',
-  '"How do you get inspiration for your songs?"',
+  '"Do you love Pineapples?"',
  '"Dude, where\'s my car?"', 
  '"Are you Sarah Connor?"', 
  '"Why is the rum gone?"', 
@@ -70,7 +70,7 @@ var counter=setInterval(timer, 1000); //ms
 
 
 $(document).ready(function(){
-  $("#current-question-text").html('"Whyyyyy do you build me up, build me up?"');
+  $("#current-question-text").html('"What\'s the meaning of live?"');
   starting_width = calcWidth("bar");
   sub = width/count
   $('#yeah-btn').click(function() {

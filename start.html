@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Orratorr</title>
+  <title>BubbleChat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -37,13 +37,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">ORRATORR</a>
+        <a class="brand" href="#">Cross Fire Me</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="start.html">Find your crowd</a></li>
-            <li><a href="discover.html">Seek enlightenment</a></li>
+            <li><a href="#contact">Feel Fire</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -54,31 +53,34 @@
   <div class="container">
 
       
-    </div>
     <!-- BEGIN VIDEO THIRD -->
     
     <div class="well" <!-- Wrap it all in a well -->
     <div class="row" id="videothird">
-			<div class="span6 offset1">
+			<div class="span6 offset">
 				<!-- Include YouTube video here -->
 				<iframe width="580" height="360" src="http://www.youtube.com/embed/IytNBm8WA1c?rel=0" frameborder="0" allowfullscreen></iframe>
 				<!-- End of YouTube video here -->
         </div>
 
-      <div class="span5">
-        <div class="well" style="text-align:center;">
+      <div class="span4 offset1">
+        <div class="" style="text-align:center;">
         <h2>
         Current Question:&nbsp;</h2>
         <div id="current-question-text" style="font-size:22px; font-weight: bold;" class="">
         </div>
         
         <!-- Start of Progress Bar -->
-        <div id="progress_container">
-          <div class="row" id="timerrow">
-          <div id="timer" class="span2 timer"></div>
-          <div class="span4 progress progress-striped active" style="background-color:white">
-              <div id="bar" class="bar" style="width: 100%;"></div>    
+        <div id="progress_container" style="margin-top:10px;">
+          <div class="row">
+          <div class="span1" id="timerrow">
+          	<div id="timer" class="timer"></div>
           </div>
+          <div class="span3">
+	          <div class=" progress progress-striped active" style="background-color:white">
+	              <div id="bar" class="bar" style="width: 100%;"></div>    
+         	 </div>
+         </div>
           </div>
         </div>
         <!-- end of Progress Bar -->
@@ -107,7 +109,7 @@
 </div>
 <div id=="questionthird">
   <!-- tabs for questions -->
-  <div class="tabbable" style="background-color: white"> 
+  <div class="tabbable"> 
     <ul class="nav nav-tabs">
       <li class="active"><a href="#tab1" data-toggle="tab">Top Questions</a></li>
       <li><a href="#tab2" data-toggle="tab">Hot Questions</a></li>
@@ -116,63 +118,63 @@
     <div class="tab-content">
       <div class="tab-pane active" id="tab1">
         <!-- FIRST TOP QUESTION -->
-        <table class="table table-bordered qbackground">
-          <tr>
-            <td style="width: 10%">1.</td>
-            <td style="width: 70%">To be or not to be?</td>
-            <td style="width: 20%">
-              <div style="float: left; padding: 3px">
-        	<div style="font-size: 30px; float: left" id="Q1votes">1500</div>
-        	<div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
-              </div>
-              <div style="float: right;">
-        	<div style="float: left;">
-        	  <button class="btn btn-success" type="button" onclick="incQ1()">+</button>
-        	</div>
-        	<div style="float: left; clear: left">
-        	  <button class="btn btn-danger" type="button" onclick="decQ1()">-</button>
-        	</div>
-              </div>
-            </td>
+        <table class="table table-bordered">
+        	<tr>
+        	  <td style="width: 10%">1.</td>
+        	  <td style="width: 70%">To be or not to be?</td>
+        	  <td style="width: 20%">
+        	    <div style="float: left; padding: 3px">
+        	      <div style="font-size: 30px; float: left">1,500</div>
+        	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
+        	    </div>
+        	    <div style="float: right;">
+        	      <div style="float: left;">
+        		      +
+        	      </div>
+        	      <div style="float: left; clear: left">
+        		      -
+        	      </div>
+        	    </div>
+        	  </td>
           </tr>
-	</table>	      
-	<!-- SECOND TOP QUESTION -->
-	<table class="table table-bordered qbackground">
+      </table>	      
+      <!-- SECOND TOP QUESTION -->
+      <table class="table table-bordered">
       	<tr>
       	  <td style="width: 10%">2.</td>
       	  <td style="width: 70%">What is the air speed velocity of an unladen swallow?</td>
       	  <td style="width: 20%">
       	    <div style="float: left; padding: 3px">
-      	      <div style="font-size: 30px; float: left" id="Q2votes">783</div>
+      	      <div style="font-size: 30px; float: left">1,500</div>
       	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
       	    </div>
       	    <div style="float: right;">
       	      <div style="float: left;">
-        	<button class="btn btn-success" type="button" onclick="incQ2()">+</button>
-              </div>
-              <div style="float: left; clear: left">
-        	<button class="btn btn-danger" type="button" onclick="decQ2()">-</button>
+      		      +
+      	      </div>
+      	      <div style="float: left; clear: left">
+      		      -
       	      </div>
       	    </div>
       	  </td>
         </tr>
       </table>	      
       <!-- THIRD TOP QUESTION -->
-      <table class="table table-bordered qbackground">
+      <table class="table table-bordered">
       	<tr>
       	  <td style="width: 10%">3.</td>
       	  <td style="width: 70%">Arent you a bit short to be a storm trooper?</td>
       	  <td style="width: 20%">
       	    <div style="float: left; padding: 3px">
-      	      <div style="font-size: 30px; float: left" id="Q3votes">513</div>
+      	      <div style="font-size: 30px; float: left">1,500</div>
       	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
       	    </div>
       	    <div style="float: right;">
       	      <div style="float: left;">
-        	<button class="btn btn-success" type="button" onclick="incQ3()">+</button>
-              </div>
-              <div style="float: left; clear: left">
-        	<button class="btn btn-danger" type="button" onclick="decQ3()">-</button>
+      		      +
+      	      </div>
+      	      <div style="float: left; clear: left">
+      		      -
       	      </div>
       	    </div>
       	  </td>
@@ -180,39 +182,39 @@
       </table>	      
     </div>
     <div class="tab-pane" id="tab2"> <!-- HOT QUESTIONS -->
-      <table class="table table-bordered qbackground">
+      <table class="table table-bordered">
       	 <tr>
       	  <td style="width: 80%">Why is the sky blue?</td>
       	  <td style="width: 20%">
       	    <div style="float: left; padding: 3px">
-      	      <div style="font-size: 30px; float: left" id="H1votes">412</div>
+      	      <div style="font-size: 30px; float: left">1,500</div>
       	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
       	    </div>
       	    <div style="float: right;">
       	      <div style="float: left;">
-        	<button class="btn btn-success" type="button" onclick="incH1()">+</button>
-              </div>
-              <div style="float: left; clear: left">
-        	<button class="btn btn-danger" type="button" onclick="decH1()">-</button>
+      		      +
+      	      </div>
+      	      <div style="float: left; clear: left">
+      		      -
       	      </div>
       	    </div>
       	  </td>
         </tr>
       </table>	      
-      <table class="table table-bordered qbackground">
+      <table class="table table-bordered">
       	 <tr>
       	  <td style="width: 80%">What time is diner?</td>
       	  <td style="width: 20%">
       	    <div style="float: left; padding: 3px">
-      	      <div style="font-size: 30px; float: left" id="H2votes">133</div>
+      	      <div style="font-size: 30px; float: left">1,500</div>
       	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
       	    </div>
       	    <div style="float: right;">
       	      <div style="float: left;">
-        	<button class="btn btn-success" type="button" onclick="incH2()">+</button>
-              </div>
-              <div style="float: left; clear: left">
-        	<button class="btn btn-danger" type="button" onclick="decH2()">-</button>
+      		      +
+      	      </div>
+      	      <div style="float: left; clear: left">
+      		      -
       	      </div>
       	    </div>
       	  </td>
@@ -230,7 +232,7 @@
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="./assets/js/jquery.js"></script>
-  <script src="./assets/js/bubble-chat.js"></script>
+  <script src="./assets/js/bubble-chat.js"
   <script src="./assets/js/bootstrap-transition.js"></script>
   <script src="./assets/js/bootstrap-alert.js"></script>
   <script src="./assets/js/bootstrap-modal.js"></script>
