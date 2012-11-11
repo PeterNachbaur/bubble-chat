@@ -4,13 +4,11 @@ var sub
 var starting_width
 var width 
 var quote = 0
-var quotes = ['"How to dunk a ball?"',
-  '"Why do you wear fake glasses?"',
- '"Dude, where\'s my car?"', 
- '"Are you Sarah Connor?"', 
- '"Why is the rum gone?"', 
- '"Is the buffet worth it at Shalimar?"', 
- '"What can we do for America?"']
+var quotes = ['"What\'s your favorite dance move?"',
+  '"Do you think LeBron James is HOT?"',
+ '"What\'s your favorite outfit?"', 
+ '"Do you want to make a movie?"', 
+ '"Why is the rum gone?"']
 
 function timer()
 {
