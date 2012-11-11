@@ -5,7 +5,7 @@ var starting_width
 var width 
 var quote = 0
 var quotes = ['"WWJD?"',
-  '"How do you get inspiration for your songs?"'
+  '"How do you get inspiration for your songs?"',
  '"Dude, where\'s my car?"', 
  '"Are you Sarah Connor?"', 
  '"Why is the rum gone?"', 
