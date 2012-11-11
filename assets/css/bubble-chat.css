@@ -69,7 +69,7 @@ body {
 }
 
 .current-question.text {
-  font-style: italic;
+  font-size:22px;
   float: right;
 }
 
