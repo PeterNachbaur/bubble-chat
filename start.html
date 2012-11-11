@@ -1,348 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>BubbleChat</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+  <meta charset="utf-8">
+  <title>BubbleChat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="./assets/css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
+  <!-- Le styles -->
+  <link href="./assets/css/bootstrap.css" rel="stylesheet">
+  <link href="./assets/css/bottle-chat.css" rel="stylesheet">
+  <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-      /* Sticky footer styles
-      -------------------------------------------------- */
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-      html,
-      body {
-        height: 100%;
-        background-image: url("./assets/img/lghtmesh.png");
-        /* The html and body elements cannot have any padding or margin. */
-      }
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="./assets/ico/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">    
+</head>
 
-      /* Wrapper for page content to push down footer */
-      #wrap {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        /* Negative indent footer by it's height */
-        margin: 0 auto -60px;
-      }
+<!-- BEGIN BODY -->
+<body>
 
-      /* Set the fixed height of the footer here */
-      #push,
-      #footer {
-        height: 60px;
-      }
-      #footer {
-        background-color: #f5f5f5;
-      }
-
-      /* Lastly, apply responsive CSS fixes as necessary */
-      @media (max-width: 767px) {
-        #footer {
-          margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-      }
-
-      .progress {
-        height: 40px;
-        text-align: center;
-        font-size: 30px;
-        line-height: 100%;
-        margin-top:20px;
-        margin-top:20px;
-        margin-right:auto;
-        margin-left:auto;
-        width: 70%;
-        
-
-      }
-      
-      
-    </style>
-    <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="./assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
-
-    <script src="./assets/js/jquery.js"></script>
-    <script> 
-      var count=60;
-      var sub
-      var width
-      console.log(width)
-      /*var counter=setInterval(timer, 1000); //1000 will  run it every 1 second*/
-
-      
-      function timer()
-      {
-        count=count-1;
-        width=width-sub;
-
-        document.getElementById("timer").innerHTML=count + ""; 
-        console.log(width)
-        $(".bar").width(width);
-        console.log(count)
-        if (count <= 0)
-        {
-          document.getElementById("timer").innerHTML= "0";
-          $(".bar").width(width);
-          clearInterval(counter);
-          return;
-        }
-
-      }
-
-      function calcWidth(classname) 
-      { 
-        console.log("in calcwidth")
-        width = $('#'+classname+'').width();
-        console.log(width)
-        return width
-      }
-
-      $(document).ready(function(){
-        width = calcWidth("bar");
-        sub = width/count
-        var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
-      });
-    </script>
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Cross Fire Me</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Feel Fire</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Cross Fire Me</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Feel Fire</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
+  </div>
 
-    <div class="container">
+  <div class="container">
 
-      <div class="row" id="videothird">
-      			<div class="span6 offset1">
-      				<!-- Include YouTube video here -->
-      					<iframe width="580" height="360" src="http://www.youtube.com/embed/IytNBm8WA1c?rel=0" frameborder="0" allowfullscreen></iframe>
-   			
-      				<!-- End of YouTube video here -->
-      			</div>
-      			<div class="span5">
-      				<div class="well" style="text-align:center;">
-      					<h3>Total Speaker Score</h3>
-      						<h4 class="btn btn-large btn-success">Yeah: 103</h4>
-      						<h4 class="btn btn-large btn-success">Boo: 57</h4>
-							    <ul class="nav nav-list">
-							    	<li class="divider"></li>
-							    </ul>		
-	    				    <form>
-							    <fieldset>
-							    <h3>Ask Your Question</h3>
-							    <Textarea rows="3"></textarea>
-							    </label></br>
-							    <button type="submit" class="btn btn-large btn-primary">Ask my Questions!</button>
-							    </fieldset>
-						    </form>					
-    				</div>
-      		</div>
-      		
-      		
+    <div class="row" id="videothird">
+    			<div class="span6 offset1">
+    				<!-- Include YouTube video here -->
+    					<iframe width="580" height="360" src="http://www.youtube.com/embed/IytNBm8WA1c?rel=0" frameborder="0" allowfullscreen></iframe>
+ 			
+    				<!-- End of YouTube video here -->
+            <div id=="progressthird" style="margin-bottom:40px">
+      <div class="row" id="timerrow">
+          <div id="timer" class="span2 timer"></div>
+          <div class="span4 progress progress-striped active" style="background-color:white">
+              <div id="bar" class="bar" style="width: 100%;"></div>    
+          </div>
       </div>
 
-      <div id=="progressthird" style="margin-bottom:40px">
-        <span id="timer" class="span2" style="font-size:25px; line-height:50px;font-weight:bold;color:red;text-align:right"></span>
-        <div class="progress progress-striped active" style="background-color:white">
+    </div>
+    			</div>
+    			<div class="span5">
+    				<div class="well" style="text-align:center;">
+    					<h3>Total Speaker Score</h3>
+    						<h4 class="btn btn-large btn-success">Yeah: 103</h4>
+    						<h4 class="btn btn-large btn-success">Boo: 57</h4>
+						    <ul class="nav nav-list">
+						    	<li class="divider"></li>
+						    </ul>		
+    				    <form>
+						    <fieldset>
+						    <h3>Ask Your Question</h3>
+						    <Textarea rows="3"></textarea>
+						    </label></br>
+						    <button type="submit" class="btn btn-large btn-primary">Ask my Questions!</button>
+						    </fieldset>
+					    </form>					
+  				</div>
+    		</div>
+    		
+    		
+    </div>
 
-          <div id="bar" class="bar" style="width: 100%;"></div>    
-        </div>
-
-      </div>
+    
 
 
-      <div id=="questionthird">
-	<!-- tabs for questions -->
-	<div class="tabbable"> 
-	  <ul class="nav nav-tabs">
-	    <li class="active"><a href="#tab1" data-toggle="tab">Top Questions</a></li>
-	    <li><a href="#tab2" data-toggle="tab">Hot Questions</a></li>
-	    <!-- 	    <li><a href="#tab3" data-toggle="tab">Proprose a Question</a></li> -->
-	  </ul>
-	  <div class="tab-content">
-	    <div class="tab-pane active" id="tab1">
-	      <!-- FIRST TOP QUESTION -->
-	      <table class="table table-bordered">
-		<tr>
-		  <td style="width: 10%">1.</td>
-		  <td style="width: 70%">Why are bananas so funny?</td>
-		  <td style="width: 20%">
-		    <div style="float: left; padding: 3px">
-		      <div style="font-size: 30px; float: left">1,500</div>
-		      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
-		    </div>
-		    <div style="float: right;">
-		      <div style="float: left;">
-			+
-		      </div>
-		      <div style="float: left; clear: left">
-			-
-		      </div>
-		    </div>
-		  </td>
-	      </table>	      
-	      <!-- SECOND TOP QUESTION -->
-	      <table class="table table-bordered">
-		<tr>
-		  <td style="width: 10%">2.</td>
-		  <td style="width: 70%">Why are pineapples so funny?</td>
-		  <td style="width: 20%">
-		    <div style="float: left; padding: 3px">
-		      <div style="font-size: 30px; float: left">1,500</div>
-		      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
-		    </div>
-		    <div style="float: right;">
-		      <div style="float: left;">
-			+
-		      </div>
-		      <div style="float: left; clear: left">
-			-
-		      </div>
-		    </div>
-		  </td>
-	      </table>	      
-	      <!-- THIRD TOP QUESTION -->
-	      <table class="table table-bordered">
-		<tr>
-		  <td style="width: 10%">3.</td>
-		  <td style="width: 70%">Why are mangos so funny?</td>
-		  <td style="width: 20%">
-		    <div style="float: left; padding: 3px">
-		      <div style="font-size: 30px; float: left">1,500</div>
-		      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
-		    </div>
-		    <div style="float: right;">
-		      <div style="float: left;">
-			+
-		      </div>
-		      <div style="float: left; clear: left">
-			-
-		      </div>
-		    </div>
-		  </td>
-	      </table>	      
+    <div id=="questionthird">
+<!-- tabs for questions -->
+<div class="tabbable"> 
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Top Questions</a></li>
+    <li><a href="#tab2" data-toggle="tab">Hot Questions</a></li>
+    <!-- 	    <li><a href="#tab3" data-toggle="tab">Proprose a Question</a></li> -->
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <!-- FIRST TOP QUESTION -->
+      <table class="table table-bordered">
+	<tr>
+	  <td style="width: 10%">1.</td>
+	  <td style="width: 70%">Why are bananas so funny?</td>
+	  <td style="width: 20%">
+	    <div style="float: left; padding: 3px">
+	      <div style="font-size: 30px; float: left">1,500</div>
+	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
 	    </div>
-	    <div class="tab-pane" id="tab2"> <!-- HOT QUESTIONS -->
-	      <table class="table table-bordered">
-		<tr>
-		  <td style="width: 80%">Why is the sky blue?</td>
-		  <td style="width: 20%">
-		    <div style="float: left; padding: 3px">
-		      <div style="font-size: 30px; float: left">1,500</div>
-		      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
-		    </div>
-		    <div style="float: right;">
-		      <div style="float: left;">
-			+
-		      </div>
-		      <div style="float: left; clear: left">
-			-
-		      </div>
-		    </div>
-		  </td>
-	      </table>	      
-	      <table class="table table-bordered">
-		<tr>
-		  <td style="width: 80%">What time is diner?</td>
-		  <td style="width: 20%">
-		    <div style="float: left; padding: 3px">
-		      <div style="font-size: 30px; float: left">1,500</div>
-		      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
-		    </div>
-		    <div style="float: right;">
-		      <div style="float: left;">
-			+
-		      </div>
-		      <div style="float: left; clear: left">
-			-
-		      </div>
-		    </div>
-		  </td>
-	      </table>	      
+	    <div style="float: right;">
+	      <div style="float: left;">
+		+
+	      </div>
+	      <div style="float: left; clear: left">
+		-
+	      </div>
 	    </div>
+	  </td>
+      </table>	      
+      <!-- SECOND TOP QUESTION -->
+      <table class="table table-bordered">
+	<tr>
+	  <td style="width: 10%">2.</td>
+	  <td style="width: 70%">Why are pineapples so funny?</td>
+	  <td style="width: 20%">
+	    <div style="float: left; padding: 3px">
+	      <div style="font-size: 30px; float: left">1,500</div>
+	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
+	    </div>
+	    <div style="float: right;">
+	      <div style="float: left;">
+		+
+	      </div>
+	      <div style="float: left; clear: left">
+		-
+	      </div>
+	    </div>
+	  </td>
+      </table>	      
+      <!-- THIRD TOP QUESTION -->
+      <table class="table table-bordered">
+	<tr>
+	  <td style="width: 10%">3.</td>
+	  <td style="width: 70%">Why are mangos so funny?</td>
+	  <td style="width: 20%">
+	    <div style="float: left; padding: 3px">
+	      <div style="font-size: 30px; float: left">1,500</div>
+	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
+	    </div>
+	    <div style="float: right;">
+	      <div style="float: left;">
+		+
+	      </div>
+	      <div style="float: left; clear: left">
+		-
+	      </div>
+	    </div>
+	  </td>
+      </table>	      
+    </div>
+    <div class="tab-pane" id="tab2"> <!-- HOT QUESTIONS -->
+      <table class="table table-bordered">
+	<tr>
+	  <td style="width: 80%">Why is the sky blue?</td>
+	  <td style="width: 20%">
+	    <div style="float: left; padding: 3px">
+	      <div style="font-size: 30px; float: left">1,500</div>
+	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
+	    </div>
+	    <div style="float: right;">
+	      <div style="float: left;">
+		+
+	      </div>
+	      <div style="float: left; clear: left">
+		-
+	      </div>
+	    </div>
+	  </td>
+      </table>	      
+      <table class="table table-bordered">
+	<tr>
+	  <td style="width: 80%">What time is diner?</td>
+	  <td style="width: 20%">
+	    <div style="float: left; padding: 3px">
+	      <div style="font-size: 30px; float: left">1,500</div>
+	      <div style="float: left; overflow: auto; clear: left; padding: 2px">votes</div>
+	    </div>
+	    <div style="float: right;">
+	      <div style="float: left;">
+		+
+	      </div>
+	      <div style="float: left; clear: left">
+		-
+	      </div>
+	    </div>
+	  </td>
+      </table>	      
+    </div>
 <!--
-	    <div class="tab-pane" id="tab3">
-	      <p>Enter your question below and click submit.</p>
-                <form>
-		  <fieldset>
-                    <textarea rows="3"></textarea>
-		    <p>
-                    <button type="submit" class="btn">Submit</button>
-		  </fieldset>
-	      </form>
-	    </div>
+    <div class="tab-pane" id="tab3">
+      <p>Enter your question below and click submit.</p>
+              <form>
+	  <fieldset>
+                  <textarea rows="3"></textarea>
+	    <p>
+                  <button type="submit" class="btn">Submit</button>
+	  </fieldset>
+      </form>
+    </div>
 -->
-	  </div>
-	</div>
-      </div>
+  </div>
+</div>
+    </div>
 
 <!-- 
 
 
-    </div> <!-- /container -->
-    
-  <!-- Start the footer -->  
-    <div id="footer">
-      <div class="container">
-        <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
-      </div>
+  </div> <!-- /container -->
+  
+<!-- Start the footer -->  
+  <div id="footer">
+    <div class="container">
+      <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
     </div>
-  <!-- End the footer -->  
+  </div>
+<!-- End the footer -->  
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/bootstrap-transition.js"></script>
-    <script src="./assets/js/bootstrap-alert.js"></script>
-    <script src="./assets/js/bootstrap-modal.js"></script>
-    <script src="./assets/js/bootstrap-dropdown.js"></script>
-    <script src="./assets/js/bootstrap-scrollspy.js"></script>
-    <script src="./assets/js/bootstrap-tab.js"></script>
-    <script src="./assets/js/bootstrap-tooltip.js"></script>
-    <script src="./assets/js/bootstrap-popover.js"></script>
-    <script src="./assets/js/bootstrap-button.js"></script>
-    <script src="./assets/js/bootstrap-collapse.js"></script>
-    <script src="./assets/js/bootstrap-carousel.js"></script>
-    <script src="./assets/js/bootstrap-typeahead.js"></script>
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/bottle-chat.js"
+  <script src="./assets/js/bootstrap-transition.js"></script>
+  <script src="./assets/js/bootstrap-alert.js"></script>
+  <script src="./assets/js/bootstrap-modal.js"></script>
+  <script src="./assets/js/bootstrap-dropdown.js"></script>
+  <script src="./assets/js/bootstrap-scrollspy.js"></script>
+  <script src="./assets/js/bootstrap-tab.js"></script>
+  <script src="./assets/js/bootstrap-tooltip.js"></script>
+  <script src="./assets/js/bootstrap-popover.js"></script>
+  <script src="./assets/js/bootstrap-button.js"></script>
+  <script src="./assets/js/bootstrap-collapse.js"></script>
+  <script src="./assets/js/bootstrap-carousel.js"></script>
+  <script src="./assets/js/bootstrap-typeahead.js"></script>
 
-  </body>
+</body>
 </html>
