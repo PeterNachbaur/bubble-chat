@@ -1,25 +1,29 @@
-var count=60;
+var question_length=5;
+var count = question_length;
 var sub
-var width
-
-var counter=setInterval(timer, 1000); //ms
-
+var starting_width
+var width 
+var quote = 0
+var quotes = ['WWJD?', 'Dude, where\'s my car', 'Are you Sarah Connor?', 'Why is the rum gone?', 'What can we do for America?']
 
 function timer()
 {
+  
   count=count-1;
+  $(".timer").html(count);
   width=width-sub;
-
-  document.getElementById("timer").innerHTML=count + ""; 
-  console.log(width)
   $(".bar").width(width);
-  console.log(count)
   if (count <= 0)
   {
-    document.getElementById("timer").innerHTML= "0";
+    $(".timer").html(0);
     $(".bar").width(width);
     clearInterval(counter);
-    return;
+    width = starting_width;
+    $(".timer").html(0);
+    count = question_length;
+    $("#current-question-text").html(quotes[quote]);
+    quote++;
+    counter = setInterval(timer, 1000); //ms
   }
 
 }
@@ -32,8 +36,11 @@ function calcWidth(classname)
   return width
 }
 
+
+var counter=setInterval(timer, 1000); //ms
+
+
 $(document).ready(function(){
-  width = calcWidth("bar");
+  starting_width = calcWidth("bar");
   sub = width/count
-  var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
 });

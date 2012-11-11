@@ -53,10 +53,29 @@ body {
 }
 
 .timer {
-  font-size:25px;
-  line-height:50px;
+  font-size:35px;
+  line-height:80px;
   font-weight:bold;
   color:red;
   text-align:right;
 }
 
+.current-question {
+  height:40px;
+  margin-left: auto%;
+  font-weight:bold;
+  font-size:30px;
+  float: left;
+}
+
+.current-question.text {
+  font-style: italic;
+  float: right;
+}
+
+.current-question container {
+  overflow: hidden;
+}
+.current-question.container {
+  /*margin: auto;*/
+}
