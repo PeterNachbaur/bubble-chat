@@ -65,19 +65,6 @@ function incrementBoo()
   $('#boo-btn').text("Boo: "+int)
 }
 
-$(document).ready(function(){
-  $("#current-question-text").html('"What\'s the meaning of live?"');
-  starting_width = calcWidth("bar");
-  sub = width/count
-  $('#yeah-btn').click(function() {
-    incrementYeah()
-  });
-  $('#boo-btn').click(function() {
-    incrementBoo()
-  });
-});
-
-
 function incQ1() {
   var str = $('#Q1votes').text();
   var votes = parseInt(str);

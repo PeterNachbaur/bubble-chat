@@ -68,9 +68,11 @@ body {
   float: left;
 }
 
-.current-question.text {
+.current-question-text {
   font-size:22px;
+  color:green;
   float: right;
+  font-style: italic;
 }
 
 .current-question container {
