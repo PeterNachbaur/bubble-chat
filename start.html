@@ -51,25 +51,15 @@
         }
       }
 
-
-
-      /* Custom page CSS
-      -------------------------------------------------- */
-      /* Not required for template or sticky footer method. */
-
-      .container {
-        width: auto;
-        max-width: 680px;
-      }
-      .container .credit {
-        margin: 20px 0;
-      }
-
       .progress {
         height: 40px;
         text-align: center;
         font-size: 30px;
         line-height: 100%;
+        margin-top:20px;
+        width: 50%;
+        margin:auto
+
       }
       
       
@@ -113,8 +103,22 @@
 
     <div class="container">
 
-      <div id="videothird">
+      <div class="row" id="videothird">
+      			<div class="span6 offset1">
+      				<!-- Include YouTube video here -->
+      					<iframe width="580" height="360" src="http://www.youtube.com/embed/IytNBm8WA1c?rel=0" frameborder="0" allowfullscreen></iframe>
+   			
+      				<!-- End of YouTube video here -->
+      			</div>
+      			<div class="span3">
+      				<div class="well">
+      					<h2>Total Speaker Score</h2>
+      						<h4>Yeays: 103</h4>
+      						<h4>Boos: 57</h4>
+      				</div>
+      			      
       
+      		</div>
       </div>
 
       <div id=="progressthird">
@@ -156,7 +160,6 @@
   <!-- Start the footer -->  
     <div id="footer">
       <div class="container">
-        <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
       </div>
     </div>
   <!-- End the footer -->  
