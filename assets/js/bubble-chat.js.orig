@@ -1,11 +1,11 @@
-var question_length=10;
+var question_length=5;
 var count = question_length;
 var sub
 var starting_width
 var width 
 var quote = 0
 var quotes = ['"WWJD?"',
-  '"How do you get inspiration for your songs?"',
+  '"Do you love Pineapples?"',
  '"Dude, where\'s my car?"', 
  '"Are you Sarah Connor?"', 
  '"Why is the rum gone?"', 
@@ -66,6 +66,7 @@ function incrementBoo()
 }
 
 
+<<<<<<< HEAD
 var counter=setInterval(timer, 1000); //ms
 
 
@@ -80,6 +81,8 @@ $(document).ready(function(){
     incrementBoo()
   });
 });
+=======
+>>>>>>> f0b67193fa4fb22205d9e36ff58edfd86677848d
 
 
 function incQ1() {
