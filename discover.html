@@ -52,15 +52,111 @@
   <!-- END NAV BAR -->
   <!-- BEGIN MAIN CONTAINER -->
   <div id="container" class="container">
-    <div class="box">
-      Box1
-    </div>
-    <div class="box">
-      Box2
-    </div>
-    <div class="box">
-      Box3
-    </div>
+
+
+    <h1>Live Orratorrs!</h1>
+    <ul class="thumbnails">
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p>
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger"><a href="start.html" style="color: inherit; text-decoration:inherit;">Join!</a></h4>
+        </div>
+      </li>
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p>
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger"><a href="start.html" style="color: inherit; text-decoration:inherit;">Join!
+        </div>
+      </li>
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p>
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger"><a href="start.html" style="color: inherit; text-decoration:inherit;">Join!
+        </div>
+      </li>
+    </ul>
+
+
+    <h1>Upcoming Events!</h1>
+    <ul class="thumbnails">
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p>
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger">Register!</h4>
+        </div>
+      </li>
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p>
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger">Register!</h4>
+        </div>
+      </li>
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p>
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger">Register!</h4>
+        </div>
+      </li>
+    </ul>
+
+
+    <h1>Popular requests!</h1>
+    <ul class="thumbnails">
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p> 
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger">Follow!</h4>
+        </div>
+      </li>
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p>
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger">Follow!</h4>
+        </div>
+      </li>
+      <li class="span4">
+        <div class="thumbnail well">
+          <h3>Lebron James</h3>
+          <img src="http://placehold.it/300x200" alt="">
+          <p>You wanna talk ball?</p>
+          <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
+          <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
+          <h4 class="btn btn-large btn-danger">Follow!</h4>
+        </div>
+      </li>
+    </ul>
   </div>
   
 <!-- Start the footer -->  
@@ -73,7 +169,7 @@
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="./assets/js/jquery.js"></script>
-  <script src="./assets/js/masonry.js"></script>
+  <script src="./assets/js/bubble-chat.js"></script>
   <script src="./assets/js/bootstrap-transition.js"></script>
   <script src="./assets/js/bootstrap-alert.js"></script>
   <script src="./assets/js/bootstrap-modal.js"></script>
@@ -87,14 +183,15 @@
   <script src="./assets/js/bootstrap-carousel.js"></script>
   <script src="./assets/js/bootstrap-typeahead.js"></script>
   <script> 
-    $(document).ready(function(){
-       alert("load");
-      $('#container').masonry({
-        alert("masonry");
-        itemSelector: '.box',
-        columnWidth: 100
-      });
+  $(document).ready(function(){
+    $('.yeah-btn').click(function() {
+      //$(this).attr ( "id" ); pass id to function
+      incrementYeah()
     });
+    $('.boo-btn').click(function() {
+      incrementBoo()
+    });
+  });
   </script>
 
 </body>
