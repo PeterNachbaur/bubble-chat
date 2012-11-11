@@ -58,9 +58,9 @@
     <ul class="thumbnails">
       <li class="span4">
         <div class="thumbnail well">
-          <h3>Lebron James</h3>
-          <img src="http://i.a.cnn.net/si/2005/writers/chris_ballard/12/07/cavaliers/t1_lebron.jpg" alt="">
-          <p class="blurb">You wanna talk ball?</p>
+          <h3>Lady Gaga</h3>
+          <img src="http://images2.mtv.com/uri/mgid:uma:video:mtv.com:294427?width=525&height=560&mindimension=324&crop=true&quality=0.85" alt="">
+          <p class="blurb">Looking forward to seeing my little monsters</p>
           <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
           <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
           <h4 class="btn btn-large btn-danger"><a href="start.html" style="color: inherit; text-decoration:inherit;">Join!</a></h4>
@@ -93,12 +93,12 @@
     <ul class="thumbnails">
       <li class="span4">
         <div class="thumbnail well">
-          <h3>Lady Gaga</h3>
-          <img src="http://images2.mtv.com/uri/mgid:uma:video:mtv.com:294427?width=525&height=560&mindimension=324&crop=true&quality=0.85" alt="">
-          <p class="blurb">Looking forward to seeing my little monsters</p>
+          <h3>Lebron James</h3>
+          <img src="http://i.a.cnn.net/si/2005/writers/chris_ballard/12/07/cavaliers/t1_lebron.jpg" alt="">
+          <p class="blurb">Witness</p>
           <h4 class="btn btn-large btn-success yeah-btn">Yeah: 11</h4>
           <h4 class="btn btn-large btn-success boo-btn">Boo: 3</h4>
-          <h4 class="btn btn-large btn-danger">Register!</h4>
+          <h4 class="btn btn-large btn-danger"><a href="start.html" style="color: inherit; text-decoration:inherit;">Register!</a></h4>
         </div>
       </li>
       <li class="span4">
@@ -187,10 +187,10 @@
   $(document).ready(function(){
     $('.yeah-btn').click(function() {
       //$(this).attr ( "id" ); pass id to function
-      incrementYeah()
+      incrementYeah();
     });
     $('.boo-btn').click(function() {
-      incrementBoo()
+      incrementBoo();
     });
     $('#container').masonry({
       itemSelector: '.box',
