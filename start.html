@@ -57,8 +57,11 @@
         font-size: 30px;
         line-height: 100%;
         margin-top:20px;
+        margin-top:20px;
+        margin-right:auto;
+        margin-left:auto;
         width: 50%;
-        margin:auto
+        
 
       }
       
@@ -77,6 +80,46 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <script src="./assets/js/jquery.js"></script>
+    <script> 
+      var count=10;
+      var sub
+      var width
+      console.log(width)
+      /*var counter=setInterval(timer, 1000); //1000 will  run it every 1 second*/
+
+      
+      function timer()
+      {
+        count=count-1;
+        width=width-sub;
+        if (count <= 0)
+        {
+          clearInterval(counter);
+          document.getElementById("timer").innerHTML= "0";
+          return;
+        }
+
+        document.getElementById("timer").innerHTML=count + ""; 
+        console.log(width)
+        $(".bar").width(width);
+      }
+
+      function calcWidth(classname) 
+      { 
+        console.log("in calcwidth")
+        width = $('#'+classname+'').width();
+        console.log(width)
+        return width
+      }
+
+      $(document).ready(function(){
+        width = calcWidth("bar");
+        sub = width/count
+        var counter=setInterval(timer, 1000); //1000 will  run it every 1 second
+      });
+    </script>
   </head>
 
   <body>
@@ -113,7 +156,7 @@
       			<div class="span3">
       				<div class="well">
       					<h2>Total Speaker Score</h2>
-      						<h4>Yeays: 103</h4>
+      						<h4>Yays: 103</h4>
       						<h4>Boos: 57</h4>
       				</div>
       			      
@@ -122,10 +165,11 @@
       </div>
 
       <div id=="progressthird">
-        <div class="progress progress-striped">
-          What is the secret to life?
-        <div class="bar" style="width: 20%;"></div>
-      </div>
+        <span id="timer" class="span2" style="font-size:25px; line-height:50px"></span>
+        <div class="progress progress-striped active" style="">
+
+          <div id="bar" class="bar" style="width: 100%;"></div>    
+        </div>
 
       </div>
 
@@ -167,7 +211,7 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./assets/js/jquery.js"></script>
+    
     <script src="./assets/js/bootstrap-transition.js"></script>
     <script src="./assets/js/bootstrap-alert.js"></script>
     <script src="./assets/js/bootstrap-modal.js"></script>
