@@ -66,20 +66,6 @@ function incrementBoo()
 }
 
 
-var counter=setInterval(timer, 1000); //ms
-
-
-$(document).ready(function(){
-  $("#current-question-text").html('"Whyyyyy do you build me up, build me up?"');
-  starting_width = calcWidth("bar");
-  sub = width/count
-  $('#yeah-btn').click(function() {
-    incrementYeah()
-  });
-  $('#boo-btn').click(function() {
-    incrementBoo()
-  });
-});
 
 
 function incQ1() {
