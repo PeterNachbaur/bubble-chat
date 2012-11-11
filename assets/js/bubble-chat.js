@@ -1,4 +1,4 @@
-var question_length=5;
+var question_length=10;
 var count = question_length;
 var sub
 var starting_width
@@ -64,10 +64,6 @@ function incrementBoo()
   int++;
   $('#boo-btn').text("Boo: "+int)
 }
-
-
-var counter=setInterval(timer, 1000); //ms
-
 
 $(document).ready(function(){
   $("#current-question-text").html('"What\'s the meaning of live?"');
