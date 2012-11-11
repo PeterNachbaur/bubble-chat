@@ -121,3 +121,8 @@ body {
 .questions {
   margin: 30px;
 }
+
+.blurb {
+  margin: auto;
+  font-weight: bold;
+}
