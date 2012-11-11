@@ -4,8 +4,8 @@ var sub
 var starting_width
 var width 
 var quote = 0
-var quotes = ['"What is an index fund?"',
-  '"How do you get inspiration for your songs?"',
+var quotes = ['"How to dunk a ball?"',
+  '"Why do you wear fake glasses?"',
  '"Dude, where\'s my car?"', 
  '"Are you Sarah Connor?"', 
  '"Why is the rum gone?"', 
