@@ -82,7 +82,24 @@ body {
 
 /* question background */
 .qbackground {
-    style="background-color: #FFE673"      
+    background-color: #FFE673;
+}
+
+/* plus-button and minus-button didn't really work but leaving them here for now */
+.plus-button {
+    /*     background-color: #FF0000;
+    color: rgba(255, 255, 255, 1) */
+    background-image: -moz-linear-gradient(top, #10D010, #10D010);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#10D010), to(#10D010));
+    width: 30px;
+}
+
+.minus-button {
+    /*     background-color: #10D010; */
+    /*     color: rgba(0,0,255,0)	 */
+    background-image: -moz-linear-gradient(top, #FF0000, #FF0000);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF0000), to(#FF0000));
+    width: 30px;
 }
 
 .navbar .brand {

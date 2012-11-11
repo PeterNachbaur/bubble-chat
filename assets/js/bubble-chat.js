@@ -113,3 +113,25 @@ function decQ3() {
   var votes = parseInt(str);
   $('#Q3votes').text(votes-1)
 }
+
+function incH1() {
+  var str = $('#H1votes').text();
+  var votes = parseInt(str);
+  $('#H1votes').text(votes+1)
+}
+function decH1() {
+  var str = $('#H1votes').text();
+  var votes = parseInt(str);
+  $('#H1votes').text(votes-1)
+}
+
+function incH2() {
+  var str = $('#H2votes').text();
+  var votes = parseInt(str);
+  $('#H2votes').text(votes+1)
+}
+function decH2() {
+  var str = $('#H2votes').text();
+  var votes = parseInt(str);
+  $('#H2votes').text(votes-1)
+}
