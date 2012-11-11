@@ -79,3 +79,16 @@ body {
 .current-question.container {
   /*margin: auto;*/
 }
+
+/* question background */
+.qbackground {
+    style="background-color: #FFE673"      
+}
+
+.plus-button {
+    width=10px;
+}
+
+.minus-button {
+    width=10px;
+}

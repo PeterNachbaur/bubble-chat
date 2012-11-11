@@ -79,3 +79,37 @@ $(document).ready(function(){
     incrementBoo()
   });
 });
+
+
+function incQ1() {
+  var str = $('#Q1votes').text();
+  var votes = parseInt(str);
+  $('#Q1votes').text(votes+1)
+}
+function decQ1() {
+  var str = $('#Q1votes').text();
+  var votes = parseInt(str);
+    $('#Q1votes').text(votes-1)
+}
+
+function incQ2() {
+  var str = $('#Q2votes').text();
+  var votes = parseInt(str);
+  $('#Q2votes').text(votes+1)
+}
+function decQ2() {
+  var str = $('#Q2votes').text();
+  var votes = parseInt(str);
+  $('#Q2votes').text(votes-1)
+}
+
+function incQ3() {
+  var str = $('#Q3votes').text();
+  var votes = parseInt(str);
+  $('#Q3votes').text(votes+1)
+}
+function decQ3() {
+  var str = $('#Q3votes').text();
+  var votes = parseInt(str);
+  $('#Q3votes').text(votes-1)
+}
